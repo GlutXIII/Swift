@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		852184162090CF410041C7AC /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852184152090CF410041C7AC /* AddTaskViewController.swift */; };
+		852184182090D01B0041C7AC /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852184172090D01B0041C7AC /* Task.swift */; };
+		8521841A2090D08F0041C7AC /* TaskStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852184192090D08F0041C7AC /* TaskStore.swift */; };
+		8521841C2090D0930041C7AC /* TasksUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8521841B2090D0930041C7AC /* TasksUtility.swift */; };
 		852BC26A208789BE008A5EE1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852BC269208789BE008A5EE1 /* AppDelegate.swift */; };
 		852BC26C208789BE008A5EE1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852BC26B208789BE008A5EE1 /* ViewController.swift */; };
 		852BC26F208789BE008A5EE1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 852BC26D208789BE008A5EE1 /* Main.storyboard */; };
@@ -36,6 +40,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		852184152090CF410041C7AC /* AddTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
+		852184172090D01B0041C7AC /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Task.swift; path = "../../../../Downloads/MaybeDoIt-master/Todo/Models/Task.swift"; sourceTree = "<group>"; };
+		852184192090D08F0041C7AC /* TaskStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TaskStore.swift; path = "../../../../Downloads/MaybeDoIt-master/Todo/Helpers/TaskStore.swift"; sourceTree = "<group>"; };
+		8521841B2090D0930041C7AC /* TasksUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TasksUtility.swift; path = "../../../../Downloads/MaybeDoIt-master/Todo/Helpers/TasksUtility.swift"; sourceTree = "<group>"; };
 		852BC266208789BE008A5EE1 /* com.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = com.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		852BC269208789BE008A5EE1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		852BC26B208789BE008A5EE1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -103,9 +111,13 @@
 			children = (
 				852BC269208789BE008A5EE1 /* AppDelegate.swift */,
 				852BC26B208789BE008A5EE1 /* ViewController.swift */,
+				852184172090D01B0041C7AC /* Task.swift */,
 				852BC26D208789BE008A5EE1 /* Main.storyboard */,
+				852184152090CF410041C7AC /* AddTaskViewController.swift */,
 				852BC29920879E95008A5EE1 /* Second.swift */,
+				8521841B2090D0930041C7AC /* TasksUtility.swift */,
 				852BC29720878F1B008A5EE1 /* TableController.swift */,
+				852184192090D08F0041C7AC /* TaskStore.swift */,
 				852BC270208789BE008A5EE1 /* Assets.xcassets */,
 				852BC272208789BE008A5EE1 /* LaunchScreen.storyboard */,
 				852BC275208789BE008A5EE1 /* Info.plist */,
@@ -269,6 +281,10 @@
 				852BC26C208789BE008A5EE1 /* ViewController.swift in Sources */,
 				852BC26A208789BE008A5EE1 /* AppDelegate.swift in Sources */,
 				852BC29A20879E95008A5EE1 /* Second.swift in Sources */,
+				852184182090D01B0041C7AC /* Task.swift in Sources */,
+				852184162090CF410041C7AC /* AddTaskViewController.swift in Sources */,
+				8521841A2090D08F0041C7AC /* TaskStore.swift in Sources */,
+				8521841C2090D0930041C7AC /* TasksUtility.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
