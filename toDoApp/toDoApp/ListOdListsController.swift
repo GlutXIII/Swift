@@ -37,6 +37,37 @@ class ListOdListsController: UIViewController, UITableViewDelegate, UITableViewD
         }
         listOfList.reloadData()
     }
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let important = importantAction(at: indexPath)
+        let delete = deleteAction(at: indexPath)
+        return UISwipeActionsConfiguration(actions: [delete,important])
+    }
+    
+    func importantAction(at indexPath: IndexPath) -> UIContextualAction{
+        let chosenToDoList = listOdTodoList[indexPath.row]
+        let action = UIContextualAction(style: .normal, title: "Important"){ (action,view,completion) in
+            chosenToDoList.movedToAllWhenDone = !chosenToDoList.movedToAllWhenDone
+            completion(true)
+        }
+        action.image = #imageLiteral(resourceName: "Alarm")
+        action.backgroundColor = chosenToDoList.movedToAllWhenDone ? .blue : .gray
+        return action
+    }
+    
+    func deleteAction(at indexPath: IndexPath) -> UIContextualAction {
+        let action = UIContextualAction(style: .destructive, title: "Delete"){ (action,view,completion) in
+            if(listOdTodoList[indexPath.row].movedToAllWhenDone){
+                allLists.append(listOdTodoList[indexPath.row])
+            }
+            listOdTodoList.remove(at: indexPath.row)
+            self.listOfList.reloadData()
+            completion(true)
+            }
+        action.image = #imageLiteral(resourceName: "Trash")
+        action.backgroundColor = .red
+        return action
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -48,16 +79,16 @@ class ListOdListsController: UIViewController, UITableViewDelegate, UITableViewD
         performSegue(withIdentifier: "showListOfList", sender: self)
     }
     
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete{
-            if(listOdTodoList[indexPath.row].movedToAllWhenDone){
-                allLists.append(listOdTodoList[indexPath.row])
-            }
-            listOdTodoList.remove(at: indexPath.row)
+ //   func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+  //      if editingStyle == .delete{
+ //           if(listOdTodoList[indexPath.row].movedToAllWhenDone){
+ //               allLists.append(listOdTodoList[indexPath.row])
+  //          }
+  //          listOdTodoList.remove(at: indexPath.row)
             //todoList?.remove(at: indexPath.row)
-            tableView.reloadData()
-        }
-    }
+  //          tableView.reloadData()
+ //       }
+ //   }
     
 
     /*
